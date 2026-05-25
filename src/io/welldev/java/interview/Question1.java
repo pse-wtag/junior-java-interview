@@ -3,6 +3,18 @@
  */
 void main() {
   List<Person> people = populateNames();
+
+  /**
+   * Did it with no help
+   */
+  var uppercaseNames = people.stream()
+          .filter(person -> person.gender().equals(Gender.MALE))
+          .filter(males -> males.age > 18)
+          .filter(legals -> legals.name.toLowerCase().startsWith("j"))
+          .map(p -> p.uppercaseName())
+          .toList();
+
+  System.out.println(uppercaseNames);
 }
 
 public List<Person> populateNames() {

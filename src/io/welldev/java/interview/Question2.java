@@ -3,6 +3,15 @@
  */
 void main() {
     IO.println(addingNames());
+
+    /**
+     * Did not about Collector.groupingBy() need to guide here
+     */
+    var nonNulls = addingNames().stream()
+            .filter(Objects::nonNull)
+            .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+    System.out.println(nonNulls);
 }
 
 List<String> name = new ArrayList<>();
