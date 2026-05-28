@@ -1,5 +1,5 @@
 /**
- *  Algorithm: You are working at a scale SaaS company that maintains deployment versions across
+ *  You are working at a scale SaaS company that maintains deployment versions across
  *  distributed regions.
  *  Due to a global rollout strategy, version IDs are stored in a sorted order:
  *  [1001, 1002, 1003, 1004, 1005, 1006]
@@ -9,6 +9,6 @@
  *  [1004, 1005, 1006, 1001, 1002, 1003]
  *  Each number represent the release version timestamp (or build ID)
  *  The system needs to find the oldest deployed version (minimum version) quickly.
- */
+ **/
 
 void main(){}
